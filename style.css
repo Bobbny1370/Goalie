@@ -85,6 +85,29 @@ footer {
 	
 }
 
+.dropbtn:hover + .content{
+	
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+	
+}
+
+.content a {
+  display: block; /* Set the display property to block for each link */
+  text-decoration: none; /* Remove underlines from links if needed */
+  color: #333; /* Set the text color */
+  padding: 8px 0; /* Adjust padding as needed */
+}
+
+.content a:hover {
+  background-color: #ddd;
+}
+
 section {
   padding: 20px;
   max-width: 800px;
@@ -143,6 +166,7 @@ p {
 	  justify-content: center;
 	  text-align: center;
   }
+  
 }
 
 /* Add more media queries as needed */
