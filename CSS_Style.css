@@ -1,0 +1,198 @@
+/* Global styles */
+* {
+    box-sizing: border-box;
+	margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Default font stack, change as needed */
+    background-color: #f5f5f5; /* Set the background color for the body */
+    color: #333; /* Set the default text color */
+}
+
+/* Font face - Uncomment if you have custom fonts */
+/*
+@font-face {
+    font-family: MyFont;
+    src: url(DryTransferClarendonCrusty.otf);
+}
+*/
+
+/*
+color scheme:
+White:
+White #FFF
+Light Grey #D6D6D6
+Medium Grey #ADADAD
+Dark Grey #7D7D7D
+Black #000
+Peach #FFCC99
+Silvery #666699
+Red #CC0000
+*/
+:root {
+    --primary-color: #394d6d;/*#002855; /* Set your primary color */
+    --secondary-color: #C0c0c0; /* Set your secondary color */
+    --accent-color: #89764b; /* Set your accent color */
+    --background-color: #000; /* Set your background color */
+    --text-color: #333; /* Set your text color */
+}
+
+/* Header styles */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 15px;
+}
+
+.TeamLogo img {
+    width: 100%;
+    max-width: 110px;
+}
+
+.TeamSpons img {
+    width: 100%;
+    max-width: 80px;
+}
+
+.TeamName {
+    font-size: 24px;
+}
+
+.PowB {
+    font-size: 12px;
+}
+
+.top-nav__static-wrapper {
+    background-color: var(--accent-color);
+    padding: 5px;
+    text-align: center;
+	border: 2px solid var(--accent-color);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color); /* Set the header background color */
+    color: var(--secondary-color); /* Set the header text color */
+    padding: 0 15px; /* Adjust as needed */
+}
+
+.Nav {
+    background-color: var(--primary-color); /* Match the header background color */
+}
+
+/* Navigation styles */
+.Nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+.Nav li:hover .dropdown-content {
+    display: block;
+}
+
+.Nav a:hover {
+    background-color: var(--secondary-color); /* Change to your desired hover color */
+}
+
+/* Dropdown styles */
+.Nav .dropdown button,
+.Nav a {
+    background-color: var(--primary-color); /* Match the header background color */
+}
+
+.Nav a,
+.Nav .dropdown button {
+    border: none; /* Remove border around buttons */
+    outline: none; /* Remove outline on focus */
+	color: var(--secondary-color); /* Change to your desired text color */
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+	font-size: 16px; /* Set the desired font size */
+    font-weight: bold; /* Make the text bold */
+    background-color: var(--primary-color); /* Set the button background color */
+    transition: background-color 0.3s ease; /* Add smooth transition */
+
+}
+
+.Nav .dropdown button:hover,
+.Nav a:hover {
+    background-color: #555; /* Change to your desired hover color */
+	color: var(--primary-color)
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333; /* Change to your desired background color */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff; /* Change to your desired text color */
+    padding: 12px 16px;
+    display: block;
+}
+
+/* Responsive media queries */
+@media (min-width: 600px) {
+    /* Phone styles */
+    .header-container {
+        padding: 0 30px; /* Adjust padding for phones */
+    }
+
+    .TeamName {
+        font-size: 28px; /* Adjust font size for phones */
+    }
+}
+
+@media (min-width: 768px) {
+    /* Tablet styles */
+    .header-container {
+        padding: 0 50px; /* Adjust padding for tablets */
+    }
+
+    .TeamName {
+        font-size: 36px; /* Adjust font size for tablets */
+    }
+
+    .Nav li {
+        display: inline-flex;
+        margin-bottom: 0;
+        margin-right: 10px; /* Adjust spacing between navigation items */
+    }
+}
+
+@media (min-width: 992px) {
+    /* Desktop styles */
+    .header-container {
+        padding: 0 100px; /* Adjust padding for desktop */
+    }
+}
