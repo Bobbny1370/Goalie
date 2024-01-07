@@ -27,6 +27,11 @@ footer {
 .subhead-container{
 	display: flex;
 	border: 2px solid red;
+    height: 150px; /* Set a fixed height for the container */
+}
+
+.hidden {
+  display: none;
 }
 
 .content{
@@ -37,9 +42,41 @@ footer {
 	
 	box-sizing: border-box;
 	padding: 2px;
-	padding-top: 25px;
 	flex-grow: 1;
 	
+}
+
+.empty-container{
+	
+	flex-grow: 1;
+	font-size: 10px;
+	text-align: left;
+	position: relative;
+	width: 150px;
+	
+}
+
+.empty-container p{
+	
+	color: #FFF;
+	
+}
+
+.empty-container a{
+	
+	color: #FFF; /* Set the color you want */
+    text-decoration: none; /* Remove underline by default */
+	
+}
+
+.empty-container a:hover{
+	
+	color: Red; /* Set the color you want */
+	
+}
+
+.logo-container, .title-container{
+	padding-top: 30px;
 }
 
 .title-container{
