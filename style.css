@@ -37,6 +37,7 @@ footer {
 	
 	box-sizing: border-box;
 	padding: 2px;
+	padding-top: 25px;
 	flex-grow: 1;
 	
 }
