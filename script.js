@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var dropdownContent = document.getElementById('dropdownContent');
 
     // Set interval to toggle every 5 seconds (5000 milliseconds)
-    setInterval(toggleSections, 2500);
+    setInterval(toggleSections, 5000);
 
     dropbtn.addEventListener('mouseover', function() {
         dropdownContent.style.display = 'block';

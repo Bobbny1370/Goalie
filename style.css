@@ -179,7 +179,7 @@ textarea {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #16638C;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -188,7 +188,8 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #f9f9f9;
+	color: #16638C
 }
 
 /* Responsive styles */
