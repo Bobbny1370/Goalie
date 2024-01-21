@@ -209,12 +209,13 @@ button:hover {
     padding: 10px;
   }
   .nodrop{
+	  display: none;
+  }
+  
+  .dropbtn{
 	  display: block;
 	  justify-content: center;
 	  text-align: center;
-  }
-  .dropbtn{
-	  display: none;
   }
 }
 
