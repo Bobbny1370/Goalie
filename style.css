@@ -191,6 +191,49 @@ button:hover {
     background-color: #f9f9f9;
 	color: #16638C
 }
+/* Other resources page styling */
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dropdown-container {
+    text-align: center;
+    padding: 10px;
+	display: none; /* Initially hide the selector */
+}
+
+.side-selector {
+    padding: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Additional styles for better visibility */
+.side-selector {
+    background-color: #16638C;
+    color: white;
+    border: none;
+}
+
+.side-selector:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+/* Optional styling for better visibility */
+.column:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.column:nth-child(even) {
+    background-color: #ffffff;
+}
 
 /* Responsive styles */
 @media only screen and (min-width: 1201px) {
@@ -217,6 +260,44 @@ button:hover {
 	  justify-content: center;
 	  text-align: center;
   }
+  
+  .container {
+        flex-direction: column;
+  }
+
+  .column {
+      width: 100%;
+      display: none; /* Initially hide columns on small screens */
+  }
+
+  .column.active {
+      display: block; /* Display the active column */
+  }
+  
+  .dropdown-container {
+    text-align: center;
+    padding: 10px;
+	display: block;
+  }
+
+  .side-selector {
+  	padding: 8px;
+	font-size: 16px;
+	margin-top: 10px;
+  }
+
+/* Additional styles for better visibility */
+  .side-selector {
+    background-color: #16638C;
+    color: white;
+    border: none;
+  }
+
+  .side-selector:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  
 }
 
 @media only screen and (max-width: 650px) {
@@ -236,6 +317,19 @@ button:hover {
 	  display: block;
 	  justify-content: center;
 	  text-align: center;
+  }
+  
+  .container {
+        flex-direction: column;
+    }
+
+  .column {
+      width: 100%;
+      display: none; /* Initially hide columns on small screens */
+  }
+
+  .column.active {
+      display: block; /* Display the active column */
   }
   
 }

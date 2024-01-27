@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     var dropbtn = document.getElementById('dropdownBTN');
     var dropdownContent = document.getElementById('dropdownContent');
+	var sideSelector = document.getElementById("sideSelector");
+	var leftColumn = document.querySelector(".left-column");
+    var rightColumn = document.querySelector(".right-column");
 
     // Set interval to toggle every 5 seconds (5000 milliseconds)
     setInterval(toggleSections, 5000);
@@ -20,6 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Update company name when the window is resized
     window.addEventListener('resize', updateCompanyName);
+	
+	if (!sideSelector || !leftColumn || !rightColumn) {
+        console.error("Dropdown or columns not found. Check your element IDs and class names.");
+        return;
+    }
 
     function toggleSections() {
         const contactHeader = document.getElementById('contactHeader');
@@ -65,4 +73,31 @@ document.addEventListener('DOMContentLoaded', function() {
             companyName.textContent = 'Pad Stackers - Goalie Coaching'; // Default text for larger screens
         }
     }
+	
+	// Event listener for dropdown change
+    function setInitialVisibility() {
+        var selectedSide = sideSelector.value;
+
+        // Hide both columns
+        leftColumn.classList.remove("active");
+        rightColumn.classList.remove("active");
+
+        // Show the selected column
+        if (selectedSide === "left") {
+            leftColumn.classList.add("active");
+        } else if (selectedSide === "right") {
+            rightColumn.classList.add("active");
+        }
+    }
+
+    // Event listener for dropdown change
+    sideSelector.addEventListener("change", function () {
+        setInitialVisibility();
+    });
+
+    // Set initial visibility on page load
+    setInitialVisibility();
+
+    console.log("JavaScript loaded successfully.");
+	
 });
